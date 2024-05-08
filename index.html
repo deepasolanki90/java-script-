@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #main-container{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    /* background-image: url(img1.jpg); */
+    position: absolute;
+    border: 2px solid red;
+  }
+  .container{
+    margin-top: -32%;
+    margin-left: 28%;
+    height: 40vh;
+    width: 45%;
+    /* border: 1px solid black; */
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position:relative;
+    z-index: 9;
+  } 
+ #p{
+    font-size: 30px;
+    color: white;
+  }
+  /* Media Queries for Tablet */
+  @media only screen and (max-width: 768px) {
+    .container {
+      margin-top: -76%;
+      margin-left: 10%;
+      width: 80%;
+    }
+  }
+
+  /* Media Queries for Tablet */
+  @media only screen and (max-width: 834px) {
+    .container {
+      margin-top: -76%;
+      margin-left: 10%;
+      width: 80%;
+    }
+  }
+
+  /* Media Queries for Mobile */
+  @media only screen and (max-width: 480px) {
+    .container {
+      margin-top: -107%;
+      margin-left: 5%;
+      width: 90%;
+    }
+    #p {
+      font-size: 20px;
+    }
+  }
+</style>
+
+</style>
+<body>
+    <div id="main-container">
+      
+      <img src="img1.jpg" alt="" id="img" height="100%" width="100%">
+      <div class="container">
+        <h2 id="p">Do you love Deepa ?</h2>
+       <button onclick="btn1(); document.getElementById('img').src='heart-flare.gif'" class="btn" type="button">Nope</button>
+       <button onclick="btn2(); document.getElementById('img').src='love-hearts.gif'" class="btn" type="button">Yes Sure</button>
+      </div>
+    </div>
+</body>
+<script>
+  function btn1(){
+  document.getElementById("p").innerHTML = "Zinda ni rhna tumko?";
+}
+
+  function btn2(){
+    document.getElementById("p").innerHTML = "She Also loves you";
+  }
+</script>
+
+</html>
